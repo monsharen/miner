@@ -13,6 +13,7 @@
 	    font-size: 2em;
 	    text-align: center;
 	    margin-top: 5em;
+	    overflow: hidden;
 	}
 
 	.coinGrats {
@@ -22,8 +23,8 @@
 </style>
 </head>
 <body>
+<img src="komi.jpg" />
 
-<img src="https://img2.wikia.nocookie.net/__cb20141005151315/bntest/images/5/50/Wiki-background" />
 <p>Total Order Coins mined: <span id="wallet">0</span></p>
 
 
@@ -37,7 +38,7 @@
 	function showCongrats() {
 		$("#wallet").animate({left: '250px'});
 
-		var div = $("<div>", {"class": "coinGrats"}).text("You mined a coin!").append('<br /><img src="komi.jpg" />').fadeOut(500, function() { $(this).remove(); });
+		var div = $("<div>", {"class": "coinGrats"}).text("You mined a coin!").append('<br /><img src="https://img2.wikia.nocookie.net/__cb20141005151315/bntest/images/5/50/Wiki-background" />').fadeOut(500, function() { $(this).remove(); });
 		$("body").append(div);
 	}
 
