@@ -40,7 +40,12 @@
 	}
 
 	function loadWallet() {
-		wallet = localStorage.wallet;
+		if (localStorage.getItem("infiniteScrollEnabled") === null) {
+			wallet = 0;
+		} else {
+			wallet = localStorage.wallet;
+		}
+		
 	}
 
 	function mine() {	
